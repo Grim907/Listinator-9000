@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
   userInput = "Type your To-Do here...";
-  todos = [{description: 'dishes' },{description: 'mopping' }];
+  todos = [];
   constructor() {}
 
   ngOnInit(): void {}
