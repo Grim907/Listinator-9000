@@ -1,7 +1,53 @@
-<h1>
-  Listinator 9000
-</h1>
-<p>
-  A easy to/do list to keep track of tasks throughout your day!
-</p>
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <p class="lead text-muted" style="text-align: center; font-family: Tahoma">
+↓ Welcome please enter your To-Do below! ↓
+      </p>
+    </div>
+  </div>
+</section>
+
+<div style="text-align: center; font-family: Tahoma">
+  <textarea id="freeform" name="freeform" rows="3" cols="20" [(ngModel)]="userInput">
+    Enter To-Do here...
+    </textarea>
+</div>
+
+<div style="text-align: center">
+
+  <button class="btn btn-primary" (click)="addNewTodo()">Add new todo</button>
+
+</div>
+
+<div style="text-align: center">
+  <div class="album py-5 bg-light" *ngFor="let todo of todos; let i = index">
+    <div class="container">
+      <div class="row row-cols-3">
+    <div class="col"></div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <div style="text-align: center">
+
+
+            </div>
+
+            <div class="card-body">
+              <div class="card-text,">
+                <label for="freeform"> {{todo.description}}</label>
+                <br />
+                <button class="btn btn-danger"(click)="onDeleteTodo(i)">Delete</button>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
