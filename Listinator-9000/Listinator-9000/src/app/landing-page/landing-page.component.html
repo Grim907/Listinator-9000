@@ -38,7 +38,7 @@
                 <label for="freeform"> {{todo.description}}</label>
                 <br />
                 <button class="btn btn-danger"(click)="onDeleteTodo(i)">Delete</button>
-                <button class="btn btn-success">Complete</button>
+                <button class="btn btn-success"(click)="onDeleteTodo(i)">Complete</button>
               </div>
 
               <div class="d-flex justify-content-between align-items-center">
